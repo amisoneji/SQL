@@ -162,6 +162,77 @@ ________________________________________________________________________________
 - CHECK - Ensures that all values in a column satisfies a specific condition
 - DEFAULT - Sets a default value for a column when no value is specified
 
+**SQL NOT NULL Constraint:**
+
+  By default, a column can hold NULL values.
+
+  The NOT NULL constraint enforces a column to NOT accept NULL values.
+
+  syntax:
+
+  create table table_name(col_name datatype NOT NULL,......)
+
+  ALTER TABLE table_name MODIFY col_name datatype NOT NULL;
+
+**SQL UNIQUE Constraint:**
+
+  The UNIQUE constraint ensures that all values in a column are different.
+
+  syntax:
+
+  create table table_name(col_name datatype unique,......)
+
+  ALTER TABLE table_name add unique(col_name)
+
+**SQL PRIMARY KEY Constraint:**
+
+  The PRIMARY KEY constraint uniquely identifies each record in a table.
+
+  Primary keys must contain UNIQUE values, and cannot contain NULL values.
+
+  A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns (fields).
+
+  syntyax:
+
+  create table table_name(col_name datatype PRIMARY KEY,col_name datatype,......)
+                                     or
+  create table table_name(col_name datatype,col_name datatype,......,PRIMARY KEY(col_name))
+
+  ALTER TABLE table_name ADD PRIMARY KEY (col_name);
+
+  ALTER TABLE table_name DROP PRIMARY KEY;
+
+**SQL COMPOSITE KEY:**
+
+  A composite key is a combination of two or more columns in a table that can be used to uniquely
+
+  Identify each row in the table when the columns are combined uniqueness is guaranteed, but when it taken individually it does not       guarantee uniqueness.
+
+  syntax:
+
+  create table table_name(col_name1 datatype,col_name2 datatype,......,PRIMARY KEY(COL1,COL2,..))
+
+
+**SQL FOREIGN KEY Constraint:**
+
+  A FOREIGN KEY is a key used to link two tables together.
+
+  A FOREIGN KEY is a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table.
+
+  The table containing the foreign key is called the child table, and the table containing the primary key is called the referenced or     parent table. 
+
+  The FOREIGN KEY constraint also prevents invalid data from being inserted into the foreign key column, because it has to be one of the   values contained in the table it points to.
+
+  syntax:
+  create table table_name1(col_name1 datatype,col_name2 datatype,......,PRIMARY KEY(COL))
+
+  create table table_name2(col_name1 datatype,col_name2 datatype,......,FOREIGN KEY(COL) 
+  
+  REFERENCES table_name1(pk_col_table1))
+
+
+
+
 
 
 
