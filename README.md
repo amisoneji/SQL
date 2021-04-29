@@ -244,24 +244,37 @@ ________________________________________________________________________________
 
   syntax:
 
-  CREATE TABLE Persons (
-     ID int NOT NULL,
-     LastName varchar(255) NOT NULL,
-     FirstName varchar(255),
-     Age int,
-     CHECK (Age>=18)
-   );
+     CREATE TABLE Persons (
+        
+        ID int NOT NULL,
+        
+        LastName varchar(255) NOT NULL,
+        
+        FirstName varchar(255),
+        
+        Age int,
+        
+        CHECK (Age>=18)
+       
+       );
 
   To allow naming of a CHECK constraint, and for defining a CHECK constraint on multiple columns, use the following SQL syntax:
 
-  CREATE TABLE Persons (
-     ID int NOT NULL,
-     LastName varchar(255) NOT NULL,
-     FirstName varchar(255),
-     Age int,
-     City varchar(255),
-     CONSTRAINT CHECK (Age>=18 AND City='Sandnes')
-   );
+    CREATE TABLE Persons (
+       
+       ID int NOT NULL,
+       
+       LastName varchar(255) NOT NULL,
+       
+       FirstName varchar(255),
+       
+       Age int,
+      
+      City varchar(255),
+      
+      CONSTRAINT CHECK (Age>=18 AND City='Sandnes')
+     
+     );
 
  The DEFAULT constraint is used to provide a default value for a column.
  
@@ -269,21 +282,112 @@ ________________________________________________________________________________
  
  The following SQL sets a DEFAULT value for the "City" column when the "Persons" table is created:
 
- CREATE TABLE Persons (
-     ID int NOT NULL,
-     LastName varchar(255) NOT NULL,
-     FirstName varchar(255),
-     Age int,
-     City varchar(255) DEFAULT 'Noida'
+   CREATE TABLE Persons (
+     
+         ID int NOT NULL,
+         
+         LastName varchar(255) NOT NULL,
+         
+         FirstName varchar(255),
+     
+         Age int,
+         
+         City varchar(255) DEFAULT 'Noida'
   );
 
  The DEFAULT constraint can also be used to insert system values, by using functions like GETDATE():
 
- CREATE TABLE Orders (
-     ID int NOT NULL,
-     OrderNumber int NOT NULL,
-     OrderDate date DEFAULT GETDATE()
-  );
+     CREATE TABLE Orders (
+           
+           ID int NOT NULL,
+          
+           OrderNumber int NOT NULL,
+     
+           OrderDate date DEFAULT GETDATE()
+           
+           );
+           
+**AUTO INCREMENT Field:**
+
+   Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.
+
+   Often this is the primary key field that we would like to be created automatically every time a new record is inserted.
+
+   Syntax for MySQL
+
+   The following SQL statement defines the "Personid" column to be an auto-increment primary key field in the "Persons" table:
+
+   CREATE TABLE Persons (
+       Personid int NOT NULL AUTO_INCREMENT,
+       
+       LastName varchar(255) NOT NULL,
+       
+       FirstName varchar(255),
+       
+       Age int,
+    
+       PRIMARY KEY (Personid)
+       
+       );
+   
+   By default, the starting value for AUTO_INCREMENT is 1, and it will increment by 1 for each new record.
+   
+   To let the AUTO_INCREMENT sequence start with another value, use the following SQL statement:
+   
+   ALTER TABLE Persons AUTO_INCREMENT=100;
+
+
+**MySQL Functions:**
+________________________________________________________________________________________________________________________________
+
+   MySQL has many built-in functions.
+
+   Commonly Used String Functions:
+
+   Function		Description
+
+   CHAR_LENGTH	Returns the length of a string (in characters)
+   
+   CONCAT		Adds two or more expressions together
+
+   LOWER		Converts a string to lower-case
+   
+   REVERSE		Reverses a string and returns the result
+   
+   UPPER		Converts a string to upper-case
+
+
+**Commonly Used Numeric Functions:**
+
+  Function		Description
+  
+  ABS		Returns the absolute value of a number
+  
+  AVG		Returns the average value of an expression
+  
+  CEIL		Returns the smallest integer value that is >= to a number
+  
+  COUNT		Returns the number of records returned by a select query
+
+  FLOOR		Returns the largest integer value that is <= to a number
+  
+  MAX		Returns the maximum value in a set of values
+  
+  MIN		Returns the minimum value in a set of values
+  
+  SUM		Calculates the sum of a set of values
+
+**Commonly Date Functions:**
+
+  Function		Description
+
+  CURDATE		Returns the current date
+
+  CURTIME		Returns the current time
+
+  NOW		Returns the current date and time
+
+
 
 
 
