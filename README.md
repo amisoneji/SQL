@@ -379,7 +379,7 @@ ________________________________________________________________________________
 
 **Commonly Date Functions:**
 
-    Function		Description
+    Function	   Description
  
     CURDATE		   Returns the current date
 
