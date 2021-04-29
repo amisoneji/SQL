@@ -230,6 +230,60 @@ ________________________________________________________________________________
   
   REFERENCES table_name1(pk_col_table1))
 
+**SQL CHECK Constraint:**
+  
+  The CHECK constraint is used to limit the value range that can be placed in a column.
+
+  If you define a CHECK constraint on a single column it allows only certain values for this column.
+
+  If you define a CHECK constraint on a table it can limit the values in certain columns based on values in other columns in the row.
+
+  The following SQL creates a CHECK constraint on the "Age" column when the "Persons" table is created.
+
+  The CHECK constraint ensures that the age of a person must be 18, or older:
+
+  syntax:
+
+  CREATE TABLE Persons (
+     ID int NOT NULL,
+     LastName varchar(255) NOT NULL,
+     FirstName varchar(255),
+     Age int,
+     CHECK (Age>=18)
+   );
+
+  To allow naming of a CHECK constraint, and for defining a CHECK constraint on multiple columns, use the following SQL syntax:
+
+  CREATE TABLE Persons (
+     ID int NOT NULL,
+     LastName varchar(255) NOT NULL,
+     FirstName varchar(255),
+     Age int,
+     City varchar(255),
+     CONSTRAINT CHECK (Age>=18 AND City='Sandnes')
+   );
+
+ The DEFAULT constraint is used to provide a default value for a column.
+ 
+ The default value will be added to all new records IF no other value is specified.
+ 
+ The following SQL sets a DEFAULT value for the "City" column when the "Persons" table is created:
+
+ CREATE TABLE Persons (
+     ID int NOT NULL,
+     LastName varchar(255) NOT NULL,
+     FirstName varchar(255),
+     Age int,
+     City varchar(255) DEFAULT 'Noida'
+  );
+
+ The DEFAULT constraint can also be used to insert system values, by using functions like GETDATE():
+
+ CREATE TABLE Orders (
+     ID int NOT NULL,
+     OrderNumber int NOT NULL,
+     OrderDate date DEFAULT GETDATE()
+  );
 
 
 
