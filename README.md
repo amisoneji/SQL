@@ -123,6 +123,47 @@
    > The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
 
    > SELECT column1, column2, ...FROM table_name ORDER BY column1, column2, ... ASC|DESC;
+   
+- **The SQL UPDATE Statement:**
+
+   > The UPDATE statement is used to modify the existing records in a table.
+
+   > UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition;
+
+
+- **The SQL DELETE Statement:**
+
+   > The DELETE statement is used to delete existing records in a table.
+
+   > DELETE FROM table_name WHERE condition;
+
+- **How to find missing/NULL values in a column:**
+
+    > select * from table_name where col_name is null;
+
+
+**SQL Constraints:**
+_________________________________________________________________________________________________________________________________
+
+   > SQL constraints are used to specify rules for the data in a table.
+
+   > Constraints are used to limit the type of data that can go into a table.
+
+   > Constraints can be column level or table level. 
+
+   > Column level constraints apply to a column, and table level constraints apply to the whole table.
+
+- The following constraints are commonly used in SQL:
+
+   > NOT NULL - Ensures that a column cannot have a NULL value
+   > UNIQUE - Ensures that all values in a column are different
+   > PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+   > FOREIGN KEY - Uniquely identifies a row/record in another table
+   > CHECK - Ensures that all values in a column satisfies a specific condition
+   > DEFAULT - Sets a default value for a column when no value is specified
+
+
+
 
 
 
