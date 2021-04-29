@@ -145,22 +145,22 @@
 **SQL Constraints:**
 _________________________________________________________________________________________________________________________________
 
-   > SQL constraints are used to specify rules for the data in a table.
+- SQL constraints are used to specify rules for the data in a table.
 
-   > Constraints are used to limit the type of data that can go into a table.
+- Constraints are used to limit the type of data that can go into a table.
 
-   > Constraints can be column level or table level. 
+- Constraints can be column level or table level. 
 
-   > Column level constraints apply to a column, and table level constraints apply to the whole table.
+- Column level constraints apply to a column, and table level constraints apply to the whole table.
 
-- The following constraints are commonly used in SQL:
+**The following constraints are commonly used in SQL:**
 
-   > NOT NULL - Ensures that a column cannot have a NULL value
-   > UNIQUE - Ensures that all values in a column are different
-   > PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
-   > FOREIGN KEY - Uniquely identifies a row/record in another table
-   > CHECK - Ensures that all values in a column satisfies a specific condition
-   > DEFAULT - Sets a default value for a column when no value is specified
+- NOT NULL - Ensures that a column cannot have a NULL value
+- UNIQUE - Ensures that all values in a column are different
+- PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+- FOREIGN KEY - Uniquely identifies a row/record in another table
+- CHECK - Ensures that all values in a column satisfies a specific condition
+- DEFAULT - Sets a default value for a column when no value is specified
 
 
 
