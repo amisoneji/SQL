@@ -344,48 +344,48 @@ ________________________________________________________________________________
 
    Commonly Used String Functions:
 
-   Function		Description
+      Function		        Description
 
-   CHAR_LENGTH	Returns the length of a string (in characters)
+      CHAR_LENGTH	       Returns the length of a string (in characters)
    
-   CONCAT		Adds two or more expressions together
+      CONCAT		       Adds two or more expressions together
 
-   LOWER		Converts a string to lower-case
+      LOWER		           Converts a string to lower-case
    
-   REVERSE		Reverses a string and returns the result
+      REVERSE		       Reverses a string and returns the result
    
-   UPPER		Converts a string to upper-case
+      UPPER		           Converts a string to upper-case
 
 
 **Commonly Used Numeric Functions:**
 
-  Function		Description
+     Function		Description
   
-  ABS		Returns the absolute value of a number
+     ABS		    Returns the absolute value of a number
   
-  AVG		Returns the average value of an expression
+     AVG		    Returns the average value of an expression
   
-  CEIL		Returns the smallest integer value that is >= to a number
+     CEIL		    Returns the smallest integer value that is >= to a number
   
-  COUNT		Returns the number of records returned by a select query
-
-  FLOOR		Returns the largest integer value that is <= to a number
+     COUNT		    Returns the number of records returned by a select query
+ 
+     FLOOR		    Returns the largest integer value that is <= to a number
   
-  MAX		Returns the maximum value in a set of values
+     MAX		    Returns the maximum value in a set of values
   
-  MIN		Returns the minimum value in a set of values
+     MIN		    Returns the minimum value in a set of values
   
-  SUM		Calculates the sum of a set of values
+     SUM		    Calculates the sum of a set of values
 
 **Commonly Date Functions:**
 
-  Function		Description
+    Function		Description
+ 
+    CURDATE		   Returns the current date
 
-  CURDATE		Returns the current date
+    CURTIME		   Returns the current time
 
-  CURTIME		Returns the current time
-
-  NOW		Returns the current date and time
+    NOW		       Returns the current date and time
 
 
 
