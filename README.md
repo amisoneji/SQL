@@ -100,12 +100,33 @@
 
           WHERE ContactName LIKE 'a%o'	      Finds any values that start with "a" and ends with "o"
 
-**The SQL IN Operator:**
+- **The SQL IN Operator:**
 
--  The IN operator allows you to specify multiple values in a WHERE clause.
+   > The IN operator allows you to specify multiple values in a WHERE clause.
 
--  The IN operator is a shorthand for multiple OR conditions.
+   > The IN operator is a shorthand for multiple OR conditions.
 
- - SELECT column_name(s) FROM table_name WHERE column_name IN (value1, value2, ...);
+   > SELECT column_name(s) FROM table_name WHERE column_name IN (value1, value2, ...);
+
+- **The SQL AND, OR and NOT Operators:**
+
+   > The AND and OR operators are used to filter records based on more than one condition:
+
+   > The AND operator displays a record if all the conditions separated by AND are TRUE.
+
+   > The OR operator displays a record if any of the conditions separated by OR is TRUE.
+
+   > The NOT operator displays a record if the condition(s) is NOT TRUE.
+
+- **The SQL ORDER BY Keyword:**
+
+   > The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
+
+   > SELECT column1, column2, ...FROM table_name ORDER BY column1, column2, ... ASC|DESC;
+
+
+
+
+
 
 
