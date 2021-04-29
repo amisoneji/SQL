@@ -379,13 +379,145 @@ ________________________________________________________________________________
 
 **Commonly Date Functions:**
 
-    Function	   Description
+    Function	    Description
  
-    CURDATE		   Returns the current date
+    CURDATE		    Returns the current date
 
-    CURTIME		   Returns the current time
+    CURTIME		    Returns the current time
 
-    NOW		       Returns the current date and time
+    NOW		        Returns the current date and time
+    
+**SQL Aliases:**
+
+     SQL aliases are used to give a table, or a column in a table, a temporary name.
+
+     Aliases are often used to make column names more readable.
+
+     An alias only exists for the duration of the query.
+
+     SELECT column_name AS alias_name FROM table_name;
+
+**Create Table Using Another Table:**
+
+     A copy of an existing table can also be created using CREATE TABLE.
+
+     The new table gets the same column definitions. All columns or specific columns can be selected.
+
+     If you create a new table using an existing table, the new table will be filled with the existing values from the old table.
+
+Syntax:
+
+    CREATE TABLE new_table_name AS
+       SELECT column1, column2,...
+       FROM existing_table_name
+       WHERE ....;
+
+
+**SQL Views:**
+
+    In SQL, a view is a virtual table based on the result-set of an SQL statement.
+   
+    A view contains rows and columns, just like a real table. 
+
+    The fields in a view are fields from one or more real tables in the database.
+
+    syntax:
+        CREATE VIEW view_name AS
+        SELECT column1, column2, ...
+        FROM table_name
+       WHERE condition;
+**SQL JOIN:**
+
+       A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+       Here are the different types of the JOINs in SQL:
+
+**INNER JOIN:**
+
+       Returns records that have matching values in both tables
+
+       syntax:
+
+          SELECT column_name(s)
+          
+          FROM table1
+          
+          INNER JOIN table2
+
+          ON table1.column_name = table2.column_name;
+
+**LEFT (OUTER) JOIN:** 
+
+         The LEFT JOIN keyword returns all records from the left table (table1), and the matched records from the right table          (table2). 
+
+         The result is NULL from the right side, if there is no match.
+
+         syntax:
+
+         SELECT column_name(s) 
+         
+         FROM table1
+         
+         LEFT JOIN table2
+         
+         ON table1.column_name = table2.column_name;
+
+
+**RIGHT (OUTER) JOIN:** 
+
+         The RIGHT JOIN keyword returns all records from the right table (table2), and the matched records from the left table          (table1). 
+         
+         The result is NULL from the left side, when there is no match.
+
+         syntax:
+
+           SELECT column_name(s)
+           
+           FROM table1
+           
+           RIGHT JOIN table2
+           
+           ON table1.column_name = table2.column_name;
+
+
+**FULL (OUTER) JOIN:**
+
+           The FULL OUTER JOIN keyword returns all records when there is a match in left (table1) or right (table2) table records.
+
+           SELECT column_name(s)
+
+           FROM table1
+
+           FULL OUTER JOIN table2
+           
+           ON table1.column_name = table2.column_name
+           
+          WHERE condition;
+
+**Note:**
+          MySQL does not support full outer join we can implement it by taking union of left and right joins.
+
+          SELECT column_name(s)
+
+          FROM table1
+ 
+          RIGHT JOIN table2
+          
+          ON table1.column_name = table2.column_name 
+        
+          UNION
+
+          SELECT column_name(s)
+
+          FROM table1
+ 
+          LEFT JOIN table2
+
+          ON table1.column_name = table2.column_name;
+
+
+
+
 
 
 
