@@ -4,7 +4,7 @@
 
 mysql> select * from salesman inner join customer on salesman.city=customer.city;
 
-[image](https://user-images.githubusercontent.com/71078788/117627165-82f0e180-b195-11eb-9c62-4f5abb357266.png)
+![image](https://user-images.githubusercontent.com/71078788/117627165-82f0e180-b195-11eb-9c62-4f5abb357266.png)
 
 
 **2. Write a SQL statement to make a list with order no, purchase amount, customer name and their cities for those orders which order amount between 500 and 2000**
